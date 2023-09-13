@@ -14,7 +14,7 @@ find the command you want:
 
 DeTeXt was built using SwiftUI, PencilKit, CoreML and Combine.
 
-[Download intial DeTeXt version from the App Store!](https://apps.apple.com/us/app/id1531906207)
+[Download initial DeTeXt version from the App Store!](https://apps.apple.com/us/app/id1531906207)
 
 Code used to generate drawings, figures and the image classification model can be found in the [supplementary repository](https://github.com/venkatasg/DeTeXt-Supplementary)
 
