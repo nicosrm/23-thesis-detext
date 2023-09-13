@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030746912AB1A83C00E30987 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 030746902AB1A83B00E30987 /* README.md */; };
+		030746932AB1A87200E30987 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 030746922AB1A87200E30987 /* LICENSE */; };
 		821EE83324FAB50E0058877D /* DeTeXtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EE82024FAB50C0058877D /* DeTeXtApp.swift */; };
 		821EE83524FAB50E0058877D /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EE82124FAB50C0058877D /* CanvasView.swift */; };
 		821EE83724FAB50E0058877D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821EE82224FAB50E0058877D /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		030746902AB1A83B00E30987 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		030746922AB1A87200E30987 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		821EE82024FAB50C0058877D /* DeTeXtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeTeXtApp.swift; sourceTree = "<group>"; };
 		821EE82124FAB50C0058877D /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		821EE82224FAB50E0058877D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 		821EE81A24FAB50C0058877D = {
 			isa = PBXGroup;
 			children = (
+				030746922AB1A87200E30987 /* LICENSE */,
+				030746902AB1A83B00E30987 /* README.md */,
 				821EE81F24FAB50C0058877D /* Shared */,
 				827A5CB22516E02900E3D06B /* Resources */,
 				821EE82924FAB50E0058877D /* iOS */,
@@ -226,8 +232,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030746912AB1A83C00E30987 /* README.md in Resources */,
 				824A115125131B28003A7A8E /* Launch Screen.storyboard in Resources */,
 				821EE83724FAB50E0058877D /* Assets.xcassets in Resources */,
+				030746932AB1A87200E30987 /* LICENSE in Resources */,
 				82893B35252BC6B100B9C9DA /* Assets.xcassets in Resources */,
 				821EE84E24FAB5660058877D /* symbols.json in Resources */,
 				82E4AAA42A956CE600A80140 /* Credits.rtf in Resources */,
