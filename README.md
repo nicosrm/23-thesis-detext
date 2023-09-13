@@ -1,5 +1,8 @@
-# DeTeXt
+# 23-thesis-DeTeXt
 
+This is a fork of [`venkatasg/DeTeXt`](https://github.com/venkatasg/DeTeXt). The code will be extended to run on visionOS. The goal is to validate the conformancy of the code with Apple's [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) for visionOS.
+
+## DeTeXt
 
 Finding the symbol you want to use in LaTeX can be hard since you can't memorize
 all the possible commands and packages for every symbol you might need to use
@@ -17,9 +20,9 @@ amssymb, textcomp and more.
 
 DeTeXt was built using SwiftUI, PencilKit, CoreML and Combine.
 
-[Download DeTeXt from the App Store!](https://apps.apple.com/us/app/id1531906207)
+[Download intial DeTeXt version from the App Store!](https://apps.apple.com/us/app/id1531906207)
 
 Code used to generate drawings, figures and the image classification model can
 be found in the [supplementary repository](https://github.com/venkatasg/DeTeXt-Supplementary)
 
-**Note**: The main branch of this repository is built for iOS 15, and uses new APIs introduced with that release. Switch to the iOS-14 branch to run/test on devices with iOS 14.
+**Note**: The main branch of this repository is built for iOS 15, and uses new APIs introduced with that release.
