@@ -9,16 +9,19 @@ import SwiftUI
 import PencilKit
 
 class LabelScores: ObservableObject {
-    @Published var scores = [Dictionary<String, Double>.Element]()
-    
-    func ClearScores() {
-        self.scores = [Dictionary<String, Double>.Element]()
+
+    typealias Score = (key: String, value: Double)
+
+    @Published var scores = [Score]()
+
+    func clearScores() {
+        self.scores = [Score]()
     }
 }
 
 @main
 struct DeTeXtApp: App {
-    
+
     @StateObject var symbols = Symbols()
     @StateObject var labelScores: LabelScores = LabelScores()
 
@@ -27,11 +30,11 @@ struct DeTeXtApp: App {
         WindowGroup {
             TwoColumnMainView(labelScores: labelScores, symbols: symbols)
         }
-        .commands {   
+        .commands {
             CommandGroup(replacing: .help, addition: {
                 Link("Contact Support...",
                      destination: URL(string: "mailto:venkat@venkatasg.net")!)
-                
+
                 Divider()
 
                 Link("Release Notes",
@@ -39,10 +42,10 @@ struct DeTeXtApp: App {
                 Link("GitHub Repository",
                      destination: URL(string: "https://github.com/venkatasg/DeTeXt")!)
             })
-    
+
             CommandGroup(after: CommandGroupPlacement.undoRedo) {
                 Button("Clear Canvas") {
-                    self.labelScores.ClearScores()
+                    self.labelScores.clearScores()
                 }
                 .keyboardShortcut("r", modifiers: [.command])
             }
@@ -54,7 +57,7 @@ struct DeTeXtApp: App {
         .commands {
             CommandGroup(after: CommandGroupPlacement.undoRedo) {
                 Button("Clear Canvas") {
-                    self.labelScores.ClearScores()
+                    self.labelScores.clearScores()
                 }
                 .keyboardShortcut("r", modifiers: [.command])
             }
@@ -62,4 +65,3 @@ struct DeTeXtApp: App {
         #endif
     }
 }
-

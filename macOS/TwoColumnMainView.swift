@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct TwoColumnMainView: View {
-    
+
     @ObservedObject var labelScores: LabelScores
     @ObservedObject var symbols: Symbols
-    
+
     var body: some View {
         HStack {
             CanvasView(labelScores: labelScores, symbols: symbols)
@@ -22,14 +22,13 @@ struct TwoColumnMainView: View {
 }
 
 struct TwoColumnMainView_Previews: PreviewProvider {
-    
+
     static let symbols = Symbols()
     static let labelScores = LabelScores()
-    
+
     static var previews: some View {
         Group {
             TwoColumnMainView(labelScores: labelScores, symbols: symbols)
         }
     }
 }
-

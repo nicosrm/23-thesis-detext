@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct RowView: View {
-    
+
     @Environment(\.colorScheme) var colorScheme
-    
+
     let symbol: Symbol
     let pasteboard = UIPasteboard.general
-    
+
     var body: some View {
         HStack {
             SymbolDetailsView(symbol: symbol)
             Spacer()
-            Image("\(symbol.css_class)", label: Text(symbol.command))
+            Image("\(symbol.cssClass)", label: Text(symbol.command))
                 .font(.hugeTitle)
                 .preferredColorScheme(colorScheme)
         }
@@ -26,14 +26,14 @@ struct RowView: View {
         .onTapGesture(count: 2) {
             pasteboard.string = symbol.command
         }
-        .contextMenu{
+        .contextMenu {
             // Copy command
             Button {
                 pasteboard.string = symbol.command
             } label: {
                 Label("Copy command", systemImage: "command")
             }
-            
+
             // Copy decoded unicode character
             Button {
                 if let num = Int(symbol.unicode!, radix: 16) {
@@ -41,19 +41,18 @@ struct RowView: View {
                         let myString = String(scalarValue)
                         pasteboard.string = myString
                     }
-                }
-                else {
+                } else {
                     pasteboard.string = symbol.unicode!
                 }
-            } label : {
+            } label: {
                 Label("Copy character", systemImage: "sum")
             }
             .disabled((symbol.unicode ?? "").isEmpty)
-            
+
             // Copy the raw unicode codepoint
             Button {
                 pasteboard.string = "U+" + symbol.unicode!
-            } label : {
+            } label: {
                 Label("Copy code point", systemImage: "number")
             }
             .disabled((symbol.unicode ?? "").isEmpty)
@@ -72,7 +71,7 @@ extension Image {
     func asThumbnail(colorScheme: ColorScheme) -> some View {
         font(.largeTitle)
             .aspectRatio(contentMode: .fit)
-            .frame(width:40, alignment: .center)
+            .frame(width: 40, alignment: .center)
             .foregroundColor((colorScheme == .light ? Color.black : Color.white))
     }
 }

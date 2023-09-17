@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct Symbol : Codable, Identifiable {
+struct Symbol: Codable, Identifiable {
+
     let id: String
     let command: String
     let unicode: String?
-    let css_class: String
+    let cssClass: String
     let mathmode: Bool
     let textmode: Bool
     let package: String?
@@ -19,17 +20,17 @@ struct Symbol : Codable, Identifiable {
 
 // ObservableObject must be a class
 class Symbols: ObservableObject {
-    
-    let AllSymbols: [Symbol]
-    
+
+    let allSymbols: [Symbol]
+
     init() {
-        self.AllSymbols = Bundle.main.decode("symbols.json").sorted { s1,s2 in
-            return (s1.package ?? "", s1.command) < (s2.package ?? "", s2.command) }
+        self.allSymbols = Bundle.main.decode("symbols.json").sorted { firstSymbol, secondSymbol in
+            (firstSymbol.package ?? "", firstSymbol.command) < (secondSymbol.package ?? "", secondSymbol.command) }
     }
-    
 }
 
 extension Bundle {
+
     func decode(_ file: String) -> [Symbol] {
         guard let url = self.url(forResource: file, withExtension: nil) else {
             fatalError("Failed to locate \(file) in bundle.")
