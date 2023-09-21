@@ -1,0 +1,3 @@
+[submodule "swiftlint_extra_rules"]
+	path = swiftlint_extra_rules
+	url = git@github.com:nicosrm/23-thesis-swiftlint-rules.git
