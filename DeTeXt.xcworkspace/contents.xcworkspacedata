@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DeTeXt.xcodeproj">
+      location = "group:DeTeXt/DeTeXt.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:SwiftLint.xcodeproj">
