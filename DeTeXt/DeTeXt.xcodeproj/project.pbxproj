@@ -423,7 +423,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.7;
-				PRODUCT_BUNDLE_IDENTIFIER = Venkat.DeTeXt;
+				PRODUCT_BUNDLE_IDENTIFIER = de.nicosrm.DeTeXt;
 				PRODUCT_NAME = DeTeXt;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -455,7 +455,7 @@
 				);
 				MARKETING_VERSION = 1.7;
 				"MARKETING_VERSION[sdk=macosx*]" = 1.7;
-				PRODUCT_BUNDLE_IDENTIFIER = Venkat.DeTeXt;
+				PRODUCT_BUNDLE_IDENTIFIER = de.nicosrm.DeTeXt;
 				PRODUCT_NAME = DeTeXt;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
