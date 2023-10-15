@@ -14,7 +14,9 @@ struct PKCanvas: UIViewRepresentable {
     @Binding var canvasView: PKCanvasView
     @ObservedObject var labelScores: LabelScores
 
+    #if !os(visionOS)
     let pencilInteraction = UIPencilInteraction()
+    #endif
 
     func makeCoordinator() -> Coordinator {
         Coordinator(self, labelScores: labelScores)
@@ -28,8 +30,10 @@ struct PKCanvas: UIViewRepresentable {
         self.canvasView.delegate = context.coordinator
         self.canvasView.drawingPolicy = .anyInput
 
+        #if !os(visionOS)
         self.pencilInteraction.delegate = context.coordinator
         self.canvasView.addInteraction(self.pencilInteraction)
+        #endif
 
         return canvasView
     }
@@ -47,7 +51,7 @@ struct PKCanvas: UIViewRepresentable {
 
 extension PKCanvas {
 
-    class Coordinator: NSObject, PKCanvasViewDelegate, UIPencilInteractionDelegate {
+    class Coordinator: NSObject, PKCanvasViewDelegate {
 
         var pkCanvas: PKCanvas
         @ObservedObject var labelScores: LabelScores
@@ -70,16 +74,13 @@ extension PKCanvas {
             self.labelScores  = labelScores
         }
 
-        func pencilInteractionDidTap(_ interaction: UIPencilInteraction) {
-            // Clear the drawing when double tapped on pencil
-            self.labelScores.clearScores()
-        }
-
         func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
             // if canvasView is empty escape gracefully
             if canvasView.drawing.bounds.isEmpty { } else {
+                #if !os(visionOS)
                 // haptic feedback
                 modelHaptics()
+                #endif
 
                 // Find the scaling factor for drawings and appropriate pointsize
                 let scaleH = canvasView.drawing.bounds.size.width / canvasView.frame.width
@@ -141,3 +142,13 @@ extension PKCanvas {
         }
     }
 }
+
+#if !os(visionOS)
+extension PKCanvas.Coordinator: UIPencilInteractionDelegate {
+
+    func pencilInteractionDidTap(_ interaction: UIPencilInteraction) {
+        // Clear the drawing when double tapped on pencil
+        self.labelScores.clearScores()
+    }
+}
+#endif

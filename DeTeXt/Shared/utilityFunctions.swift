@@ -15,8 +15,10 @@ func appVersion() -> String {
     return "DeTeXt \(version) (Build \(build))"
 }
 
-// Functions for haptics    
+#if !os(visionOS)
+// Functions for haptics
 func modelHaptics() {
     let generator = UINotificationFeedbackGenerator()
     generator.notificationOccurred(.success)
 }
+#endif
