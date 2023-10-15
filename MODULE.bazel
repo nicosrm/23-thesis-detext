@@ -8,6 +8,6 @@ module(
 bazel_dep(name = "swiftlint", version = "0.52.2", repo_name = "SwiftLint")
 
 extra_rules = use_extension("@SwiftLint//bazel:extensions.bzl", "extra_rules")
-extra_rules.setup(srcs = "@thesis-detext//swiftlint_extra_rules/rules:extra_rules")
+extra_rules.setup(srcs = "@thesis-detext//swiftlint_extra_rules:extra_rules")
 
 bazel_dep(name = "rules_xcodeproj", version = "1.5.1")

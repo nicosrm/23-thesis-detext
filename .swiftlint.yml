@@ -1,3 +1,6 @@
+included:
+  - DeTeXt/*
+
 only_rules:
   # add rules
   # execute all rules if empty
