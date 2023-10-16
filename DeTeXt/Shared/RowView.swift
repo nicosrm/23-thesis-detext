@@ -23,7 +23,11 @@ struct RowView: View {
                 .preferredColorScheme(colorScheme)
         }
         .contentShape(Rectangle())
-        .onTapGesture(count: 2) {
+        .onTapGestureWithSoundAndHoverEffect(
+            count: 2,
+            soundID: 1104,
+            shape: .rect
+        ) {
             pasteboard.string = symbol.command
         }
         .contextMenu {
