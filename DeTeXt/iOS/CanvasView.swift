@@ -65,6 +65,9 @@ struct CanvasView: View {
 #endif
                                     }
                                 )
+                                #if os(visionOS)
+                                .buttonBorderShape(.circle)
+                                #endif
                                 .padding(15)
                             }
                             .frame(
