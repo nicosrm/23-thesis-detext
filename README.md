@@ -1,6 +1,6 @@
 # DeTeXt
 
-This is a fork of [`venkatasg/DeTeXt`](https://github.com/venkatasg/DeTeXt). The code will be extended to run on visionOS. The goal is to validate the conformancy of the code with Apple's [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) for visionOS.
+This is a fork of [`venkatasg/DeTeXt`](https://github.com/venkatasg/DeTeXt). The code was extended to run on visionOS. The goal is to validate the conformancy of the code with selected [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) for visionOS.
 
 
 ## App
@@ -21,8 +21,7 @@ Code used to generate drawings, figures and the image classification model can b
 
 ## Requirements
 
-- iOS 17+
-- [XCode 15](https://developer.apple.com/xcode/)
+- [Xcode 15](https://developer.apple.com/xcode/)
 - [Bazel](https://bazel.build/)
 
 
@@ -32,6 +31,5 @@ Run the following commands to build SwiftLint and the Xcode project.
 
 ```shell
 bazel build -c opt @SwiftLint//:swiftlint
-
 bazel run swiftlint_xcodeproj
 ```
