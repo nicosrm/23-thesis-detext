@@ -61,6 +61,7 @@ struct SearchView: View {
                 )
             }
             .navigationTitle("Search")
+            .navigationBarTitleDisplayMode(.large)
             .sheet(
                 isPresented: $showAboutView,
                 onDismiss: {

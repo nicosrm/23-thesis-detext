@@ -117,6 +117,7 @@ struct CanvasView: View {
                 }
             }
             .navigationTitle("Draw")
+            .navigationBarTitleDisplayMode(.large)
             .sheet(isPresented: $showAboutView) {
                 tabController.open(.draw)
             } content: {
