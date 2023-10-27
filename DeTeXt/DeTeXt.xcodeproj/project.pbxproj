@@ -27,6 +27,7 @@
 		82B3D01F251060EA00F27316 /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3D01E251060EA00F27316 /* PKCanvas.swift */; };
 		82DF4EF7251995270043C516 /* utilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF4EF6251995270043C516 /* utilityFunctions.swift */; };
 		82E4AAA42A956CE600A80140 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 82E4AAA32A956CE600A80140 /* Credits.rtf */; };
+		B637EEC02ADD1BE10010BCC0 /* View+onTapGestureWithSoundAndHoverEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B637EEBF2ADD1BE10010BCC0 /* View+onTapGestureWithSoundAndHoverEffect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +87,7 @@
 		82B3D01E251060EA00F27316 /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
 		82DF4EF6251995270043C516 /* utilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilityFunctions.swift; sourceTree = "<group>"; };
 		82E4AAA32A956CE600A80140 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		B637EEBF2ADD1BE10010BCC0 /* View+onTapGestureWithSoundAndHoverEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+onTapGestureWithSoundAndHoverEffect.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				821EE84724FAB5510058877D /* ImageHelpers.swift */,
 				825C411324FEBDB100B02DF9 /* LoadSymbols.swift */,
 				82DF4EF6251995270043C516 /* utilityFunctions.swift */,
+				B637EEBE2ADD1BBE0010BCC0 /* Extensions */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -166,6 +169,14 @@
 				82E4AAA32A956CE600A80140 /* Credits.rtf */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		B637EEBE2ADD1BBE0010BCC0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B637EEBF2ADD1BE10010BCC0 /* View+onTapGestureWithSoundAndHoverEffect.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				827D30F02529097A0047D92D /* MainView.swift in Sources */,
+				B637EEC02ADD1BE10010BCC0 /* View+onTapGestureWithSoundAndHoverEffect.swift in Sources */,
 				823C6D702A9C1D5100FF17F4 /* SymbolPreviewView.swift in Sources */,
 				82A26B8125E09FD00082C3AA /* TwoColumnMainView.swift in Sources */,
 				82B3D01F251060EA00F27316 /* PKCanvas.swift in Sources */,
